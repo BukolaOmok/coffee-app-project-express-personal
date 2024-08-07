@@ -93,8 +93,8 @@ app.patch("/customerdata/customer/:id", (req, res) => {
 
 // list stamp and free coffee of a specific customer (this does not work)
 
-app.get("customerdata/cutomer/:id/stampsandfreecoffee", (req, res) => {
-    const id = req.params.id;
+app.get("/customerdata/customer/:id/stampsandfreecoffee", (req, res) => {
+    const id = parseInt(req.params.id);
     const customer = customerData.find((oneCustomer) => oneCustomer.id === id);
 
     res.json({
